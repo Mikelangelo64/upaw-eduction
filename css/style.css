@@ -714,6 +714,26 @@ a, button, .logo {
     display: none;
   }
 }
+._header-scroll .menu .menu__help:hover {
+  color: #fff;
+  background-color: #2A4F5E;
+}
+
+._header-scroll .menu .menu__help:focus-visible {
+  color: #fff;
+  background-color: #2A4F5E;
+}
+
+._header-white .menu .menu__help:hover {
+  color: #fff;
+  background-color: #2A4F5E;
+}
+
+._header-white .menu .menu__help:focus-visible {
+  color: #fff;
+  background-color: #2A4F5E;
+}
+
 .menu .menu__burger {
   cursor: pointer;
   overflow: hidden;

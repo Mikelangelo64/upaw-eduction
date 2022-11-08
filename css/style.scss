@@ -695,6 +695,26 @@ a, button, .logo{
         @media (max-width: 590px) {
             display: none;
         }
+
+        @at-root ._header-scroll &:hover {
+            color: #fff;
+            background-color: $blue-dark;
+        }
+
+        @at-root ._header-scroll &:focus-visible {
+            color: #fff;
+            background-color: $blue-dark;
+        }
+
+        @at-root ._header-white &:hover {
+            color: #fff;
+            background-color: $blue-dark;
+        }
+
+        @at-root ._header-white &:focus-visible {
+            color: #fff;
+            background-color: $blue-dark;
+        }
     }
     
     //.menu__burger 
