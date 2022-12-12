@@ -126,16 +126,16 @@ $(document).ready(function(){
         })
         $('.menu-big .menu__item__with__dop').click(function(e){
             e.preventDefault()
-            if($(this).hasClass('_focus')) {
-                appearDropDown.call(this, e)
-            }
+            // if($(this).hasClass('_focus')) {
+            //     appearDropDown.call(this, e)
+            // }
 
-            if($(this).is(':focus')) {
-                $(this).addClass('_focus')
-                return
-            }
-            console.log('click');
-            //appearDropDown.call(this, e)
+            // if($(this).is(':focus')) {
+            //     $(this).addClass('_focus')
+            //     return
+            // }
+            //console.log('click');
+            appearDropDown.call(this, e)
         })
     }else{
         $('.menu .menu__item__with__dop').parent().hover(function(e){
@@ -144,14 +144,15 @@ $(document).ready(function(){
         $('.menu-big .menu__item__with__dop').parent().hover(function(e){
             appearDropDown.call($(this).children($('.menu__item__with__dop')), e)
         })
+
+        $('.menu-big .menu__item__with__dop').focus(function(e){
+            //console.log('focus');
+            //$(this).off('click')
+            $('.menu-big .menu__item__with__dop').removeClass('_focus')
+            appearDropDown.call(this, e)
+            //$(this).on('click')
+        })
     }
-    $('.menu-big .menu__item__with__dop').focus(function(e){
-        console.log('focus');
-        //$(this).off('click')
-        $('.menu-big .menu__item__with__dop').removeClass('_focus')
-        appearDropDown.call(this, e)
-        //$(this).on('click')
-    })
 
     function appearDropDown(e){
         $(this).toggleClass('_active-dropdown')
