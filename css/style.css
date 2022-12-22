@@ -1033,6 +1033,7 @@ a, button, .logo {
   margin-right: 0;
 }
 .menu-desktop-list__item {
+  display: block;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -1080,10 +1081,14 @@ a, button, .logo {
   border-radius: 5px;
   position: absolute;
   width: 110px;
-  top: 26px;
+  top: 100%;
   left: -2px;
   z-index: 1;
 }
+.menu-desktop-list .menu-desktop-list__item.menu__item__with__dop:focus-visible + .menu-dropdown {
+  display: block;
+}
+
 .menu-dropdown li {
   color: #2A4F5E;
   font-weight: 400;
