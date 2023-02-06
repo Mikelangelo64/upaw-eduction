@@ -2313,7 +2313,7 @@ a, button, .logo{
     transition: all .8s ease;
 
     @media (max-width: 750px) {
-        display: block;
+        //display: block;
     }
 
     &._close-preloader{
@@ -9504,6 +9504,13 @@ a, button, .logo{
                         flex: 0 0 54.687%;
                     }
                 }
+
+                @at-root ._renouncement .registration-form__section._multiple {
+                    @media (min-width: 550px) {
+                        flex-wrap: nowrap;
+                    }
+                }
+
             }
 
             &._pet {
@@ -9547,6 +9554,29 @@ a, button, .logo{
                     color: #FFB11A;
                 }
 
+            }
+
+            .registration-form__field {
+                width: 100%;
+                > * + * {
+                    margin-top: 7px;
+                }
+
+                @at-root ._renouncement .registration-form__section .registration-form__field:first-child {
+                    @media (min-width: 550px) {
+                        width: 62.903%;
+                    }
+                }
+
+                @at-root ._renouncement .registration-form__section .registration-form__field:last-child {
+                    margin-top: 22px;
+
+                    @media (min-width: 550px) {
+                        width: 34.101%;
+                        margin-left: 2.9%; 
+                        margin-top: unset;                   
+                    }
+                }
             }
         }
 
@@ -10694,3 +10724,430 @@ a, button, .logo{
     }
 }
 
+.bank-header-charity {
+    border-radius: 40px;
+    padding: 50px 32px 58px 48px;
+    background-color: #fff;
+
+    @media (max-width:830px) {
+        border-radius: 10px;
+        padding: 24px 10px 15px 16px;
+    }
+
+    //.bank-header-charity__title 
+    &__title {
+        max-width: 54.385%;
+
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        margin-bottom: 16px;
+        color: $blue;
+
+        @media (max-width: 1250px) {
+            max-width: unset;
+        }
+    }
+    
+    //.bank-header-charity__subtitle 
+    &__subtitle {
+        max-width: 54.385%;
+
+        margin-top: 16px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000;
+
+        @media (max-width: 1250px) {
+            max-width: unset;
+        }
+
+        @media (max-width:830px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    
+    //.bank-header-charity__form 
+    &__form {
+        margin-top: 50px;
+
+        @media (max-width:830px) {
+            margin-top: 42px;
+        }
+    }
+}
+.bank-header-form {
+    font-family: $dop;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000;
+
+    > * + * {
+        margin-top: 12px;
+
+        @media (max-width: 830px) {
+            margin-top: 22px;
+        }
+    }
+
+    .field-period {
+    }
+    .radio-btn {
+    }
+    ._disabled {
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        border: 1px solid #B8B8B8;
+        border-radius: 5px;
+        transition: border 0.3s ease;
+        font-family: $dop;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        padding: 10px;
+        color: #000;
+        appearance: none;
+
+        &::placeholder {
+            font-family: $dop;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            color: #879E95;
+        }
+
+        // &:invalid {
+        //     border-color: #EE2536;
+        // }
+
+        // &:valid {
+        //     border-color: $blue;
+        // }
+    }
+
+    .select__container {
+        position: relative;
+        width: 100%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            transform: translate(-14px, -25%);
+            pointer-events: none;
+            background-image: url(../assets/img/registration/label-select.svg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+    }
+
+    button[type = submit] {
+        max-width: unset;
+        width: 100%;
+        border: unset;
+        padding: 10px 20px;
+
+        &:hover,
+        &:focus-visible {
+            color: #fff;
+            background-color: $blue-dark;
+        }
+
+        &._disabled {
+            pointer-events: none;
+            background-color: #AAAAAA;
+        }
+    }
+
+    .bank-header-form__section {
+        max-width: 34.173%;
+        width: 100%;
+        
+        @media (max-width: 830px) {
+            max-width: unset;
+        }
+
+        &._big {
+            display: flex;
+            max-width: unset;
+    
+            @media (max-width: 830px) {
+                flex-direction: column-reverse;
+            }
+
+            > * + * {
+                margin-left: 46px;
+    
+                @media (max-width: 830px) {
+                    margin-left: 0;
+                }
+            }
+
+            > *:first-child {
+                flex: 0 0 34.173%;
+
+                @media (max-width: 830px) {
+                    flex: unset;
+                    margin-top: 22px;
+                }
+            }
+        }
+
+        &._period {
+            display: flex;
+            margin-top: 16px;
+
+            @media (max-width: 830px) {
+                margin-top: 22px;
+            }
+
+            > * + * {
+                margin-left: 20px;
+            }
+        }
+
+        &._submit {
+            margin-top: 70px;
+
+            @media (max-width: 830px) {
+                margin-top: 36px;
+            }
+        }
+    }
+
+    .bank-header-form__field {
+        > * + * {
+            margin-top: 12px;
+        }
+    }
+
+    .bank-header-form__title {
+        font-size: 12px;
+        line-height: 12px;
+        color: #879E95;
+    }
+
+    .bank-header-form__variants {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 21px;
+
+        @media (max-width: 830px) {
+            margin-top: 12px;
+        }
+
+        > * + * {
+            margin-left: 26px;
+        }
+    }
+
+    .bank-header-form__variant__btn {
+        border: unset;
+        margin-top: 3px;
+        padding: unset;
+        background-color: unset;
+
+        transition: color 0.3s ease;
+
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 14px;
+        color: #000;
+
+        &:hover,
+        &:focus-visible {
+            color: $blue-dark;
+        }
+
+        &._active {
+            text-decoration: underline;
+        }
+    }
+
+    .radio-container {
+        position: relative;
+        display: block;
+        padding-left: 27px;
+
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .radio-btn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            transition: background 0.3s ease;
+            border-radius: 50%;
+
+            // @at-root .radio-container input:hover ~ .radio-btn {
+            //     background-color: $grey;
+            // }
+
+            // @at-root .radio-container input:focus-visible ~ .radio-btn {
+            //     background-color: $grey;
+            // }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 1px solid $blue-dark;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 54%;
+                left: 54%;
+                width: 64.687%;
+                height: 64.687%;
+                transform: translate(-50%, -50%) scale(0);
+                transition: transform 0.3s ease;
+                border-radius: 50%;
+                background-color: $blue;
+
+                @at-root .radio-container input:checked ~ .radio-btn::after {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+        }
+    }
+}
+
+//404
+.not-found {
+    display: flex;
+    align-items: center;
+    min-height: 547px;
+    height: 100vh;
+    padding: 164px 0 56px;
+
+    @media (max-width:830px) {
+        padding: 104px 0;
+        min-height: 553px;
+    }
+    
+    //.not-found__container 
+    &__container {
+        width: 100%;
+        max-width: 869px;
+        margin: 0 auto;
+
+        @media (max-width:1300px) {
+            max-width: 63.616%;
+        }
+
+        @media (max-width:830px) {
+            max-width: 90%;
+        }
+
+        > * + * {
+            margin-top: 30px;
+        }
+    }
+    
+    //.not-found_header 
+    &_header {
+        text-align: center;
+        color: #454545;
+
+        > * + * {
+            margin-top: 16px;
+
+            @media (max-width:830px) {
+                margin-top: 20px;
+            }
+        }
+    }
+    
+    //.not-found__title 
+    &__title {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 50px;
+        color: inherit;
+
+        @media (max-width: 830px) {
+            font-size: 32px;
+            line-height: 32px;
+        }
+
+        @media (max-width: 550px) {
+            font-size: 24px;
+            line-height: 120%;
+        }
+    }
+    
+    //.not-found__description 
+    &__description {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 120%;
+
+        @media (max-width: 830px) {
+            font-size: 16px;
+        }
+    }
+    
+    //.not-found__btn__container 
+    &__btn__container {
+        max-width: 330px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    
+    //.not-found__btn 
+    &__btn {
+        border: 1px solid $blue;
+
+        &:hover,
+        &:focus-visible {
+            border-color: $blue-dark;
+        }
+
+        @media (max-width: 830px) {
+            padding: 11px 26px;
+        }
+    }
+    
+    //.not-found__img 
+    &__img {
+        max-width: 510px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-width: 550px) {
+            max-width: 256px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

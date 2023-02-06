@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>uPaw - registration</title>
+  <title>uPaw - renouncement</title>
 
   <link rel="stylesheet" href="css/reset.css">
 
@@ -658,101 +658,48 @@
       <div class="registration__wrapper">
         <div class="registration__title__container">
           <h1 class="registration__title">
-            Завершити реєстрацію
+            Відмовитись від щомісячного платежу
           </h1>
         </div>
         <div class="registration__content">
           <div class="registration__description">
             <p>
               Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а
-              также реальное распределение букв и пробелов в абзацах
-            </p>
+              также реальное распределение букв и пробелов в абзацах </p>
           </div>
 
-          <div class="registration-info">
-            <h2 class="registration-info__title">
-              Особисті данні
-            </h2>
-            <div class="registration-info__item">
-              <p class="registration-info__key">
-                Ім'я та Прізвище:
-              </p>
-              <p class="registration-info__value">
-                Петро Петрович
-              </p>
-            </div>
-            <div class="registration-info__item">
-              <p class="registration-info__key">
-                Номер телефону:
-              </p>
-              <p class="registration-info__value">
-                + 380 88 888 88 88
-              </p>
-            </div>
-          </div>
-
-          <form action="post" class="registration-form _final">
-
-            <div class="registration-form__section">
-              <div class="select__container">
-                <select name="region">
-                  <option value="Київська">Київська</option>
-                  <option value="Запорізька">Запорізька</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="registration-form__section">
-              <div class="select__container">
-                <select name="city">
-                  <option value="Київ">Київ</option>
-                  <option value="Запоріжжя">Запоріжжя</option>
-                </select>
-              </div>
-            </div>
+          <form action="post" class="registration-form _renouncement">
 
             <div class="registration-form__section _multiple">
-              <input required minlength="1" type="text" name="street" placeholder="Вулиця *">
-              <input type="number" name="house" placeholder="№ буд">
-              <input required minlength="1" type="number" name="post-index" placeholder="Поштовий індекс*">
-            </div>
-
-            <div class="registration-form__section _pet">
-              <div class="select__container">
-                <select name="pet-0">
-                  <option value="cat">Кішка</option>
-                  <option value="dog">Пес</option>
-                </select>
-              </div>
-
-              <div class="registration-form__counter__container">
-                <p>Кількість тварини</p>
-                <div class="registration-form__counter">
-                  <a href="#" class="minus">-</a>
-                  <input type="number" required min="1" value="0">
-                  <a href="#" class="plus">+</a>
+              <div class="registration-form__field">
+                <div class="registration-form__title">
+                  <p>
+                    Номер картки
+                  </p>
                 </div>
+                <input required minlength="1" type="number" name="card-number" placeholder="">
+              </div>
+              <div class="registration-form__field">
+                <div class="registration-form__title">
+                  <p>
+                    Термін
+                  </p>
+                </div>
+                <input type="number" name="term" placeholder="__ / __">
               </div>
             </div>
 
             <div class="registration-form__section">
-              <a href="#" class="registration-form-more">
-                Додати ще +
-              </a>
+              <input required minlength="1" type="text" name="name" placeholder="Ім'я">
+            </div>
+            <div class="registration-form__section">
+              <input required minlength="1" type="text" name="last-name" placeholder="Прізвище">
             </div>
 
             <div class="registration-form__section _submit">
               <button class="_btn _btn-blue _disabled" type="submit">
-                Зареєструватися
+                Відмовитись
               </button>
-            </div>
-
-            <div class="registration-form__section _post-submit">
-              <label class="checkbox-container">
-                Є внутрішньо переміщеною особою
-                <input type="checkbox" name="privacy">
-                <span class="checkbox-btn"></span>
-              </label>
             </div>
           </form>
         </div>
