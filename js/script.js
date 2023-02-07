@@ -42,8 +42,10 @@ $(document).ready(function () {
 
   if (isMobile.any()) {
     $('body').addClass('_touch');
+    $('html').addClass('_touch');
   } else {
     $('body').addClass('_pc');
+    $('html').addClass('_pc');
   }
 
   //team banner swipe
@@ -478,20 +480,32 @@ $(document).ready(function () {
   }
 
   //filters-dropdown
-  $('.report-filter__list').fadeOut(0);
-  if (document.body.clientWidth > 830) {
-    $('.report-filter').hover(function (e) {
-      $(this).toggleClass('active');
-      const currentList = $(this).children('.report-filter__list');
-      $(currentList).fadeToggle(300);
-    });
-  } else {
+  let widthForFilter = document.body.clientWidth;
+  if (isMobile.any()) {
+    // $('.report-filter').hover(function (e) {
+    //   $(this).toggleClass('active');
+    //   const currentList = $(this).children('.report-filter__list');
+    //   $(currentList).fadeToggle(300);
+    // });
+    $('.report-filter__list').fadeOut(0);
     $('.report-filter').click(function (e) {
       $(this).toggleClass('active');
       const currentList = $(this).children('.report-filter__list');
       $(currentList).fadeToggle(300);
     });
   }
+
+  // window.addEventListener('resize', () => {
+  //   if (document.body.clientWidth <= 830 && widthForFilter !== document.body.clientWidth) {
+  //     widthForFilter = document.body.clientWidth;
+  //     $('.report-filter__list').fadeOut(0);
+  //     $('.report-filter').click(function (e) {
+  //       $(this).toggleClass('active');
+  //       const currentList = $(this).children('.report-filter__list');
+  //       $(currentList).fadeToggle(300);
+  //     });
+  //   }
+  // });
 
   //bank-more
   if (document.body.clientWidth <= 1250) {

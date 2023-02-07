@@ -6238,11 +6238,13 @@ a, button, .logo{
             .banner-mission__decription__1 {
                 font-family: $dop;
                 font-weight: 600;
+                font-size: 36px;
 
                 &._need {
                     margin-bottom: 44px;
-
+                    
                     @media (max-width:830px) {
+                        font-size: 28px;
                         margin-bottom: unset;
                     }
                 }
@@ -6260,7 +6262,7 @@ a, button, .logo{
                 margin-bottom: 10px;
 
                 @media (max-width:830px) {
-                    font-size: 18px;
+                    font-size: 21px;
                 }
 
                 &:not(._need) {
@@ -6269,6 +6271,22 @@ a, button, .logo{
                     }
                 }
             }
+        }
+
+        
+        //.banner-mission__support__btn__container 
+        .banner-mission__support__btn__container {
+            max-width: 330px;
+            margin-top: 56px;
+
+            @media (max-width: 830px) {
+                max-width: 236px;
+                margin-top: 26px;
+            }
+        }
+        
+        //.banner-mission__support_btn 
+        .banner-mission__support_btn {
         }
     }
 
@@ -6375,6 +6393,15 @@ a, button, .logo{
 
         @media (max-width:830px) {
             margin-bottom: 26px;
+        }
+
+        @at-root .banner-project h2.banner-mission__title {
+            font-size: 36px;
+            line-height: 110%;
+            
+            @media (max-width: 830px) {
+                font-size: 28px;
+            }
         }
     }
     
@@ -7404,7 +7431,11 @@ a, button, .logo{
         cursor: pointer;
         margin-left: 10px;
 
-        @at-root .active .report-filter__label  {
+        @at-root .report-filter.active .report-filter__label  {
+            transform: rotate(180deg);
+        }
+
+        @at-root ._pc .report-filter:hover .report-filter__label  {
             transform: rotate(180deg);
         }
 
@@ -7424,13 +7455,24 @@ a, button, .logo{
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
         padding: 14px 15px;
         background-color: #fff;
-
+        
         @media (max-width: 830px) {
             position: static;
             min-width: unset;
             width: 100%;
         }
+        
+        @at-root ._pc .report-filter .report-filter__list  {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+        }
 
+        @at-root ._pc .report-filter:hover .report-filter__list  {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease, visibility 0s;
+        }
     }
     
     //.report-filter__item 

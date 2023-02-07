@@ -6447,12 +6447,14 @@ a, button, .logo {
 .banner-mission.banner-project .banner-mission__money .banner-mission__decription__1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  font-size: 36px;
 }
 .banner-mission.banner-project .banner-mission__money .banner-mission__decription__1._need {
   margin-bottom: 44px;
 }
 @media (max-width: 830px) {
   .banner-mission.banner-project .banner-mission__money .banner-mission__decription__1._need {
+    font-size: 28px;
     margin-bottom: unset;
   }
 }
@@ -6469,12 +6471,22 @@ a, button, .logo {
 }
 @media (max-width: 830px) {
   .banner-mission.banner-project .banner-mission__money .banner-mission__decription__2 {
-    font-size: 18px;
+    font-size: 21px;
   }
 }
 @media (max-width: 830px) {
   .banner-mission.banner-project .banner-mission__money .banner-mission__decription__2:not(._need) {
     display: none;
+  }
+}
+.banner-mission.banner-project .banner-mission__support__btn__container {
+  max-width: 330px;
+  margin-top: 56px;
+}
+@media (max-width: 830px) {
+  .banner-mission.banner-project .banner-mission__support__btn__container {
+    max-width: 236px;
+    margin-top: 26px;
   }
 }
 @media (max-width: 830px) {
@@ -6603,6 +6615,16 @@ a, button, .logo {
     margin-bottom: 26px;
   }
 }
+.banner-project h2.banner-mission__title {
+  font-size: 36px;
+  line-height: 110%;
+}
+@media (max-width: 830px) {
+  .banner-project h2.banner-mission__title {
+    font-size: 28px;
+  }
+}
+
 .banner-mission__decription__1 {
   font-weight: 400;
   font-size: 28px;
@@ -7708,7 +7730,12 @@ a, button, .logo {
   cursor: pointer;
   margin-left: 10px;
 }
-.active .report-filter__label {
+.report-filter.active .report-filter__label {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+._pc .report-filter:hover .report-filter__label {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -7735,6 +7762,20 @@ a, button, .logo {
     width: 100%;
   }
 }
+._pc .report-filter .report-filter__list {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+  transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+}
+
+._pc .report-filter:hover .report-filter__list {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease, visibility 0s;
+  transition: opacity 0.3s ease, visibility 0s;
+}
+
 .report-filter__item {
   font-weight: 400;
   font-size: 14px;
